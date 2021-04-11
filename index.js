@@ -9,6 +9,8 @@ const devices = require('./routes/devices')
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/nodepractice').then(console.log('connected to mongodb')).catch(err=>console.log('could not connect to mongodb...!'));
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 // console.log(`app: ${app.get('env')}`);
 //adding middleware to handle requests
